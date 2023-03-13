@@ -97,11 +97,11 @@ func main() {
 		cells[9][7] = true
 
 	}
-
+	cellsprint(&cells)
 	for i := 0; i < 10000; i++ {
-		cellsprint(&cells) //예쁘게 출력
-		cellsturn(&cells)  //한턴
-		time.Sleep(100 * time.Millisecond)
 		fmt.Printf("\x1bc") //터미널 비우기
+		cellsprint(&cells)  //예쁘게 출력
+		cellsturn(&cells)   //한턴
+		time.Sleep(100 * time.Millisecond)
 	}
 }
